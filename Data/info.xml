@@ -1,0 +1,51 @@
+<Invoice>
+    <InvoiceNumber>LTH-24-267</InvoiceNumber>
+    <IssueDate>2024-10-03</IssueDate>
+    <Seller>
+        <Name>L&T Hydrocarbon Saudi Company</Name>
+        <VATNumber>300464605700003</VATNumber>
+        <Address>
+            <BuildingNo>6883</BuildingNo>
+            <StreetName>King Abdulaziz Road</StreetName>
+            <District>Al-Khobar Shamalia</District>
+            <City>Al-Khobar</City>
+            <Country>Saudi Arabia</Country>
+            <PostalCode>34428</PostalCode>
+        </Address>
+    </Seller>
+    <Buyer>
+        <Name>Larsen Toubro Arabia LLC</Name>
+        <VATNumber>300600871100003</VATNumber>
+        <Address>
+            <BuildingNo>6883</BuildingNo>
+            <StreetName>King Abdulaziz Road</StreetName>
+            <District>Al-Khobar Shamalia</District>
+            <City>Al-Khobar</City>
+            <Country>Saudi Arabia</Country>
+            <PostalCode>34428</PostalCode>
+        </Address>
+    </Buyer>
+    <Items>
+        <Item>
+            <Description>Manpower Service to LTA for Sep24</Description>
+            <UnitPrice currency="SAR">1913917.33</UnitPrice>
+            <Quantity>1</Quantity>
+            <Discount>0.00</Discount>
+            <TaxableAmount currency="SAR">1913917.33</TaxableAmount>
+            <TaxRate>15.00%</TaxRate>
+            <TaxAmount currency="SAR">287087.60</TaxAmount>
+            <ItemSubtotal currency="SAR">2201004.93</ItemSubtotal>
+        </Item>
+    </Items>
+    <Totals>
+        <TotalExcludingVAT currency="SAR">1913917.33</TotalExcludingVAT>
+        <TotalVAT currency="SAR">287087.60</TotalVAT>
+        <TotalIncludingVAT currency="SAR">2201004.93</TotalIncludingVAT>
+    </Totals>
+    <BankDetails>
+        <BankAccount>042-440958-001</BankAccount>
+        <BankName>Saudi Awwal Bank (SAB)</BankName>
+        <City>Al-Khobar</City>
+        <IBAN>SA9245000000042440958001</IBAN>
+    </BankDetails>
+</Invoice>
