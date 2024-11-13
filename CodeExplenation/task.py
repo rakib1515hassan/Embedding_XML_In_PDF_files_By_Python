@@ -3,29 +3,38 @@ import os
 
 # PDF ফাইলের সাথে এম্বেড করা XML সহ একটি ক্লাস
 class PDFWithEmbeddedXML:
+
     def __init__(self, pdf_path, xml_path):
         # পিডিএফ এবং XML ফাইলের পাথ সেট করা
         self.pdf_path = pdf_path
         self.xml_path = xml_path
         self.temp_pdf_path = "temp_output.pdf"  # অস্থায়ী পিডিএফ ফাইলের পাথ
 
+
     # XML ফাইলটি পড়ার জন্য ফাংশন
     def read_xml_file(self):
         with open(self.xml_path, 'r', encoding='utf-8') as xml_file:
             xml_data = xml_file.read()  # XML ডেটা পড়া
         return xml_data
+    
+    
 
     # পিডিএফ ফাইল তৈরি করার জন্য ফাংশন
     def create_pdf(self):
-        doc = fitz.open()  # একটি নতুন পিডিএফ ডকুমেন্ট তৈরি করা
-        page = doc.new_page()  # ডকুমেন্টে একটি নতুন পৃষ্ঠা যোগ করা
+        doc = fitz.open()     #? Create a new PDF document
+        page = doc.new_page() #? Add a new page to the document
+
         # পৃষ্ঠায় কিছু টেক্সট যোগ করা
         page.insert_text((100, 750), "Simple Invoice PDF with Embedded XML")
         page.insert_text((100, 730), "Invoice Number: LTH-24-267")
         page.insert_text((100, 710), "Issue Date: 2024-10-03")
         page.insert_text((100, 690), "Seller: L&T Hydrocarbon Saudi Company")
         page.insert_text((100, 670), "Buyer: Larsen Toubro Arabia LLC")
+
+        
         doc.save(self.temp_pdf_path)  # অস্থায়ী পিডিএফ ফাইলটি সংরক্ষণ করা
+
+
 
     # পিডিএফ ফাইলে XML এম্বেড করার জন্য ফাংশন
     def embed_xml_in_pdf(self):
@@ -44,6 +53,8 @@ class PDFWithEmbeddedXML:
 
         # অস্থায়ী ফাইলটি ডিলিট করা
         os.remove(self.temp_pdf_path)
+
+
 
 # প্রোগ্রাম রান করা হলে, নিচের অংশে কোডটি কার্যকর হবে
 if __name__ == '__main__':
